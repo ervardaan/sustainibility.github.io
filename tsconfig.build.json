@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["./node_modules/@types"],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "types": ["@types/node"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/lib/**",
+    "**/public/**",
+    "**/coverage/**"
+  ]
+}

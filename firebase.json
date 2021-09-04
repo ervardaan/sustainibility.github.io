@@ -1,0 +1,56 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "functions": {
+    "source": "./packages/api",
+    "ignore": [
+      ".firebase/**",
+      "**/node_modules/**",
+      "**/public/**",
+      ".firebaserc",
+      "firebase.json",
+      "postcss.config.js",
+      "README.md",
+      "tailwind.config.js"
+    ],
+    "runtime": "nodejs12",
+    "predeploy": []
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "ui": {
+      "enabled": true
+    },
+    "auth": {
+      "port": 9099
+    }
+  },
+  "hosting": {
+    "public": "packages/web-app/public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [ {
+      "source": "/app/*",
+      "destination": "/app",
+      "type": 301
+    }, {
+      "source": "/",
+      "destination": "/app",
+      "type": 301
+    }, {
+      "source": "**",
+      "destination": "/app",
+      "type": 301
+    } ]
+  }
+}

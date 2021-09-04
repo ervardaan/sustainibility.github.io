@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "downlevelIteration": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noUnusedLocals": false,
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "jsx": "react",
+    "isolatedModules": true,
+    "checkJs": false,
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "types": ["@types/jest", "@types/node"],
+    "esModuleInterop": true
+  }
+}
